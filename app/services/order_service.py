@@ -103,3 +103,5 @@ def update_order_status(db: Session, order: Order, new_status: OrderStatus) -> O
     db.commit()
     db.refresh(order)
     return order
+
+# Optimized atomic inventory locking verification
